@@ -49,24 +49,13 @@ public class ObjectSpawner : MonoBehaviour
     }
 
     public void HandleFruitCollision(GameObject fruit)
-    {
-        // ...
-
-        if (collider2D.CompareTag("Bomb"))
-        {
-            // Call the RemoveSprite() method on the Hearth script
-            GameObject hearthObject = GameObject.FindWithTag("Hearth");
-            if (hearthObject != null)
-            {
-                Hearth hearth = hearthObject.GetComponent<Hearth>();
-                hearth.RemoveSprite();
-            }
-
-            // Add your desired logic here, such as increasing score, destroying the fruit, etc.
-            // For example, you can call a method on the fruit's script to handle its destruction:
-            fruit.GetComponent<FruitScript>().OnSliced();
-            slash_sound.Play();
-        }
+{
+    // Perform actions when the slicer collides with a fruit
+    Debug.Log("Slicer collided with fruit: " + fruit.name);
+    
+    // Add your desired logic here, such as increasing score, destroying the fruit, etc.
+    // For example, you can call a method on the fruit's script to handle its destruction:
+    fruit.GetComponent<FruitScript>().OnSliced();
+    slash_sound.Play();
     }
-
 }
