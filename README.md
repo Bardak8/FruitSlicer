@@ -13,5 +13,5 @@ Borello Benjamin
 | health | boot screen | particles |
 | slice | fruit/bomb spawn | son/musique |
 | score text | slice trail | slice |
-|  | pause | pause |
+| game over | pause | pause |
 |  | difficulty |  | 
