@@ -12,12 +12,16 @@ public class MovementObject : MonoBehaviour
 
     void Start()
     {
+        // Vérifie si l'objet est visible à l'écran
+        isVisible = CheckVisibility();
+    }
+
+    public void Init()
+    {
         // Permet de propulser les fruits
         Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(Random.Range(minXSpeed, maxXSpeed), Random.Range(minYSpeed, maxYSpeed));
-
-        // Vérifie si l'objet est visible à l'écran
-        isVisible = CheckVisibility();
+        
     }
 
     void Update()

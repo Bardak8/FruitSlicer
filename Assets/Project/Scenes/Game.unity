@@ -1151,8 +1151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4818fd5df9df9bb47859df62329c3153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnRate: 5
+  xSpeedRange: 50
+  ySpeedRange: 20
   prefab: {fileID: 810032629224720692, guid: f9ba7039b84de1146bbf501356e50a78, type: 3}
-  interval: 5
   Y: -70
   sprites:
   - {fileID: 21300000, guid: 484792b53364e964c9614c9d3f7ec000, type: 3}
@@ -1950,7 +1952,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -41.036987, y: 0}
+  m_AnchoredPosition: {x: -41.037018, y: 0}
   m_SizeDelta: {x: 82.073, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2075282387
@@ -2135,8 +2137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4818fd5df9df9bb47859df62329c3153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnRate: 1
+  xSpeedRange: 50
+  ySpeedRange: 100
   prefab: {fileID: 810032629224720692, guid: c8f3b6676081c4949a10552be9dce341, type: 3}
-  interval: 2
   Y: -70
   sprites:
   - {fileID: 21300000, guid: 164f625f862f21348b006ccb77ebce16, type: 3}

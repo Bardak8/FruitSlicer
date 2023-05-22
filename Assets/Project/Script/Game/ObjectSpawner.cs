@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
+    [Header("Difficulty")] 
+    public float spawnRate;
+    public float xSpeedRange;
+    public float ySpeedRange;
+    
     // Start is called before the first frame update
     [Header("Target variable")]
     public GameObject prefab;
     
     [Header("Gameplay")]
-    public float interval;
     public float Y;
     
     [Header("Visuals")]
@@ -19,7 +24,7 @@ public class ObjectSpawner : MonoBehaviour
     
     void Start()
     {
-        InvokeRepeating("Spawns", interval, interval);
+        InvokeRepeating("Spawns", spawnRate, spawnRate);
     }
 
     private void Spawns()
@@ -46,6 +51,13 @@ public class ObjectSpawner : MonoBehaviour
         // Permet de changer le sprite de l'objet
         Sprite randomSprite = sprites[Random.Range(0, sprites.Length)];
         clone.GetComponent<SpriteRenderer>().sprite = randomSprite;
+
+        clone.GetComponent<MovementObject>().minXSpeed = -xSpeedRange;
+        clone.GetComponent<MovementObject>().maxXSpeed = xSpeedRange;
+        clone.GetComponent<MovementObject>().minYSpeed = ySpeedRange / 2f;
+        clone.GetComponent<MovementObject>().maxYSpeed = ySpeedRange;
+
+        clone.GetComponent<MovementObject>().Init();
     }
 
     public void HandleFruitCollision(GameObject fruit)
