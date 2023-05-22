@@ -60,12 +60,19 @@ public class ObjectSpawner : MonoBehaviour
         clone.GetComponent<MovementObject>().Init();
     }
 
+    
     public void HandleFruitCollision(GameObject fruit)
     {
         if (fruit.CompareTag("Bomb"))
         {
+            GameObject[] hearthObjects = GameObject.FindGameObjectsWithTag("Hearth");
+            if (hearthObjects.Length - 1 >= 0)
+            {
+                Destroy(hearthObjects[hearthObjects.Length - 1]);
+            }
+
             slash_sound.Play();
-            fruit.GetComponent<BombScript>().OnSliced();
+            fruit.GetComponent<FruitScript>().OnSliced();
         }
         else if (fruit.CompareTag("Fruit"))
         {
