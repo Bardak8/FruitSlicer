@@ -59,6 +59,12 @@ public class SlicerEffect : MonoBehaviour, IPointerDownHandler, IDragHandler, IP
                     // Call a method on the ObjectSpawner script to handle the collision
                     bombSpawner.HandleFruitCollision(collider2D.gameObject);
                 }
+
+                if (score == -1)
+                {
+                    score = 0;
+                    textComponent.text = score.ToString();
+                }
             }
 
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
@@ -9,6 +10,8 @@ public class ObjectSpawner : MonoBehaviour
     public float spawnRate;
     public float xSpeedRange;
     public float ySpeedRange;
+
+    public int HeartCount = 5;
     
     // Start is called before the first frame update
     [Header("Target variable")]
@@ -22,11 +25,14 @@ public class ObjectSpawner : MonoBehaviour
     
     private int hearthCount;
 
+    public string sceneName;
+
     void Start()
     {
         InvokeRepeating("Spawns", spawnRate, spawnRate);
     }
-
+    
+    
     private void Spawns()
     {
         // Permet de créer un objet
@@ -60,12 +66,19 @@ public class ObjectSpawner : MonoBehaviour
         clone.GetComponent<MovementObject>().Init();
     }
 
+    
     public void HandleFruitCollision(GameObject fruit)
     {
         if (fruit.CompareTag("Bomb"))
         {
+            GameObject[] hearthObjects = GameObject.FindGameObjectsWithTag("Hearth");
+            if (hearthObjects.Length - 1 >= 0)
+            {
+                HeartCount -= 1;
+                Destroy(hearthObjects[hearthObjects.Length - 1]);
+            }
             slash_sound.Play();
-            fruit.GetComponent<BombScript>().OnSliced();
+            fruit.GetComponent<FruitScript>().OnSliced();
         }
         else if (fruit.CompareTag("Fruit"))
         {
@@ -74,7 +87,10 @@ public class ObjectSpawner : MonoBehaviour
             fruit.GetComponent<FruitScript>().OnSliced();
             slash_sound.Play();
         }
-
-
+                
+        if (HeartCount == 0)
+        {
+            SceneManager.LoadScene("Game Over");
+        }
     }
 }

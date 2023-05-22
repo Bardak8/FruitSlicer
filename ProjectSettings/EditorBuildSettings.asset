@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/Game.unity
     guid: e3923c56cc0aaca4c965ddcc20ee708e
   - enabled: 1
+    path: Assets/Project/Scenes/Game Over.unity
+    guid: dd8042948fd920d4ca34ce2b56fe1145
+  - enabled: 1
     path: Assets/Project/Scenes/Difficulty.unity
     guid: d6e6e66c92570e34a87be4d46771819f
   m_configObjects: {}
