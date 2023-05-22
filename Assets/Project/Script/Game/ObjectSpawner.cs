@@ -13,6 +13,8 @@ public class ObjectSpawner : MonoBehaviour
     [Header("Visuals")] public Sprite[] sprites;
 
     [Header("Sound")] public AudioSource slash_sound;
+    
+    private int hearthCount;
 
     void Start()
     {
@@ -49,21 +51,14 @@ public class ObjectSpawner : MonoBehaviour
     {
         if (fruit.CompareTag("Bomb"))
         {
-            // Call the RemoveSprite() method on the Hearth script
             GameObject[] hearthObjects = GameObject.FindGameObjectsWithTag("Hearth");
-            foreach (GameObject hearthObject in hearthObjects)
+            if (hearthObjects.Length - 1 >= 0)
             {
-                Hearth hearth = hearthObject.GetComponent<Hearth>();
-                if (hearth != null)
-                {
-                    hearth.RemoveSprite();
-                }
+                Destroy(hearthObjects[hearthObjects.Length - 1]);
             }
 
-            // Add your desired logic here, such as increasing score, destroying the fruit, etc.
-            // For example, you can call a method on the fruit's script to handle its destruction:
-            fruit.GetComponent<FruitScript>().OnSliced();
             slash_sound.Play();
+            fruit.GetComponent<FruitScript>().OnSliced();
         }
         else if (fruit.CompareTag("Fruit"))
         {

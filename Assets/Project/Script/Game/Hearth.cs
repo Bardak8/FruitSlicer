@@ -1,27 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Hearth : MonoBehaviour
 {
-    public ObjectSpawner objectSpawner;
-    public int totalSprites = 6;
-    private int currentSprites;
+    public GameObject spriteObject;
 
-    void Start()
+    private void Awake()
     {
-        currentSprites = totalSprites;
+        spriteObject = transform.GetChild(0).gameObject; // Récupère le premier enfant du Hearth comme objet du sprite
     }
 
     public void RemoveSprite()
     {
-        currentSprites--;
-        Debug.Log("Remaining sprites: " + currentSprites);
-
-        if (currentSprites <= 0)
-        {
-            // Game over logic
-            Debug.Log("Game Over");
-        }
+        // Désactiver le GameObject contenant le sprite
+        spriteObject.SetActive(false);
     }
 }
