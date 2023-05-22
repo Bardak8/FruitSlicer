@@ -14,6 +14,8 @@ public class ObjectSpawner : MonoBehaviour
     
     [Header("Visuals")]
     public Sprite[] sprites;
+
+    [Header("Sound")] public AudioSource slash_sound;
     
     void Start()
     {
@@ -54,5 +56,6 @@ public class ObjectSpawner : MonoBehaviour
     // Add your desired logic here, such as increasing score, destroying the fruit, etc.
     // For example, you can call a method on the fruit's script to handle its destruction:
     fruit.GetComponent<FruitScript>().OnSliced();
+    slash_sound.Play();
     }
 }
