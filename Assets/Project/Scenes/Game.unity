@@ -1156,8 +1156,9 @@ MonoBehaviour:
   ySpeedRange: 100
   prefab: {fileID: 810032629224720692, guid: f9ba7039b84de1146bbf501356e50a78, type: 3}
   Y: -70
-  sprites: []
-  slash_sound: {fileID: 0}
+  sprites:
+  - {fileID: 21300000, guid: 484792b53364e964c9614c9d3f7ec000, type: 3}
+  slash_sound: {fileID: 2119631574}
 --- !u!4 &1367848766
 Transform:
   m_ObjectHideFlags: 0
@@ -2141,8 +2142,14 @@ MonoBehaviour:
   ySpeedRange: 50
   prefab: {fileID: 810032629224720692, guid: c8f3b6676081c4949a10552be9dce341, type: 3}
   Y: -70
-  sprites: []
-  slash_sound: {fileID: 0}
+  sprites:
+  - {fileID: 21300000, guid: 164f625f862f21348b006ccb77ebce16, type: 3}
+  - {fileID: 21300000, guid: a35ee9e5997541b40bffce72377ecec6, type: 3}
+  - {fileID: 21300000, guid: 0806d362a387f09458826ae6f4a8e7e2, type: 3}
+  - {fileID: 21300000, guid: ac8891bcc9836d1458477cab7d3b2bdc, type: 3}
+  - {fileID: 21300000, guid: 318ac9642e4d4c3438bad94a9989acbb, type: 3}
+  - {fileID: 21300000, guid: 01e091c3ce82c194cab85e9702ccf154, type: 3}
+  slash_sound: {fileID: 1085019051}
 --- !u!4 &2083834359
 Transform:
   m_ObjectHideFlags: 0
