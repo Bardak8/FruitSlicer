@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 
@@ -10,7 +11,7 @@ public class SlicerEffect : MonoBehaviour, IPointerDownHandler, IDragHandler, IP
     public ObjectSpawner bombSpawner;
     public LineRenderer lineRenderer;
     private bool isDrawing = false;
-    public Text textComponent;
+    public TextMeshProUGUI textComponent;
     private int score = 0;
 
     private void Awake()
