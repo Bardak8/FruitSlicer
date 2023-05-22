@@ -34,10 +34,10 @@ public class ObjectSpawner : MonoBehaviour
 
         // Récupère la position X de l'objet de fond (Background)
         // Récupère la position X de l'objet de fond (Background)
-        float minX = 400;
-        float maxX = 500;
+        float minX = 350f;
+        float maxX = 550f;
 
-        // Génère une position X aléatoire entre les positions min et max de X du fond
+        // Génère une position X aléatoire entre lfes positions min et max de X du fond
         float randomX = Random.Range(minX, maxX);
 
         // Permet de positionner l'objet
