@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -192, y: 284}
+  m_AnchoredPosition: {x: -192, y: 260}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &10769669
@@ -234,7 +234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -505, y: 284}
+  m_AnchoredPosition: {x: -505, y: 260}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187381240
@@ -672,7 +672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -401, y: 284}
+  m_AnchoredPosition: {x: -401, y: 260}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &334137822
@@ -849,7 +849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -611, y: 284}
+  m_AnchoredPosition: {x: -611, y: 260}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696612319
@@ -1019,7 +1019,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 284}
+  m_AnchoredPosition: {x: -300, y: 260}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &833194030
@@ -1535,11 +1535,13 @@ MonoBehaviour:
   spawnRate: 2
   xSpeedRange: 40
   ySpeedRange: 40
+  HeartCount: 5
   prefab: {fileID: 810032629224720692, guid: f9ba7039b84de1146bbf501356e50a78, type: 3}
   Y: -20
   sprites:
   - {fileID: 21300000, guid: 484792b53364e964c9614c9d3f7ec000, type: 3}
   slash_sound: {fileID: 2119631574}
+  sceneName: 
 --- !u!4 &1367848766
 Transform:
   m_ObjectHideFlags: 0
@@ -2574,6 +2576,7 @@ MonoBehaviour:
   spawnRate: 1
   xSpeedRange: 50
   ySpeedRange: 50
+  HeartCount: 5
   prefab: {fileID: 810032629224720692, guid: c8f3b6676081c4949a10552be9dce341, type: 3}
   Y: -50
   sprites:
@@ -2584,6 +2587,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 318ac9642e4d4c3438bad94a9989acbb, type: 3}
   - {fileID: 21300000, guid: 01e091c3ce82c194cab85e9702ccf154, type: 3}
   slash_sound: {fileID: 1085019051}
+  sceneName: 
 --- !u!4 &2083834359
 Transform:
   m_ObjectHideFlags: 0
