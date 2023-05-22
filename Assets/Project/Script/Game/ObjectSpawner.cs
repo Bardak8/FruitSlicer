@@ -11,16 +11,9 @@ public class ObjectSpawner : MonoBehaviour
     public float ySpeedRange;
     
     // Start is called before the first frame update
-<<<<<<< HEAD
     [Header("Target variable")]
     public GameObject prefab;
-    
-    [Header("Gameplay")]
-=======
-    [Header("Target variable")] public GameObject prefab;
 
-    [Header("Gameplay")] public float interval;
->>>>>>> a88821f2f009ec64e4d4726c110db6f08857a06f
     public float Y;
 
     [Header("Visuals")] public Sprite[] sprites;
@@ -71,14 +64,8 @@ public class ObjectSpawner : MonoBehaviour
     {
         if (fruit.CompareTag("Bomb"))
         {
-            GameObject[] hearthObjects = GameObject.FindGameObjectsWithTag("Hearth");
-            if (hearthObjects.Length - 1 >= 0)
-            {
-                Destroy(hearthObjects[hearthObjects.Length - 1]);
-            }
-
             slash_sound.Play();
-            fruit.GetComponent<FruitScript>().OnSliced();
+            fruit.GetComponent<BombScript>().OnSliced();
         }
         else if (fruit.CompareTag("Fruit"))
         {
